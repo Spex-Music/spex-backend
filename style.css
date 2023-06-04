@@ -14,7 +14,7 @@ body {
 }
 
 #nav-overlay {
-    display: none;
+    display: none;  /*none*/
     position: fixed;
     height: 100vh;
     width: 100vw;
