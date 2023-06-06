@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>spex-dashboard</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        height: 100vh;
+      }
+
+      #menu-icon {
+        cursor: pointer;
+        background-color: aquamarine;
+      }
+
+      #nav-overlay {
+        display: none; /*none*/
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+
+      nav {
+        background-color: #d9d9d9;
+        height: 100%;
+        width: 32ch;
+        padding: 16px 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 16px 16px;
+      }
+
+      nav ul li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .nav-icon {
+        height: 32px;
+        width: 32px;
+      }
+
+      #icon-dashboard {
+        background: url("icons/dashboard_icon.svg");
+      }
+
+      #icon-submissions {
+        background: url("icons/file_upload_icon.svg");
+      }
+
+      #icon-settings {
+        background: url("icons/settings_icon.svg");
+      }
+
+      #icon-music_library {
+        background: url("icons/music_playlist_icon.svg");
+      }
+
+      #icon-artists {
+        background: url("icons/artist_icon.svg");
+      }
+      #icon-faq {
+        background: url("icons/q&a_icon.svg");
+      }
+      #icon-contact {
+        background: url("icons/message_icon.svg");
+      }
+      #icon-about {
+        background: url("icons/info_icon.svg");
+      }
+      #icon-logout {
+        background: url("icons/logout_icon.svg");
+      }
+
+      main {
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* SPEX DASHBOARD */
+      #spex-dashboard {
+        height: 100%;
+        max-height: 100%;
+
+        background-color: #f2f2f2;
+        padding: 16px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 2fr 3fr;
+        grid-template-areas:
+          "dashboard-header-left dashboard-header-right"
+          "dashboard-center-left dashboard-center-right"
+          "dashboard-bottom-left dashboard-bottom-right";
+
+        gap: 16px;
+      }
+
+      #dashboard-header-left {
+        grid-area: dashboard-header-left;
+      }
+
+      #dashboard-header-right {
+        grid-area: dashboard-header-right;
+      }
+
+      #dashboard-center-left {
+        grid-area: dashboard-center-left;
+      }
+
+      #dashboard-center-right {
+        grid-area: dashboard-center-right;
+      }
+
+      #dashboard-bottom-left {
+        grid-area: dashboard-bottom-left;
+      }
+
+      #dashboard-bottom-right {
+        grid-area: dashboard-bottom-right;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav-overlay">
+      <nav id="main-menu">
+        <ul>
+          <li>
+            <i id="icon-dashboard" class="nav-icon"></i
+            ><a href="#">Dashboard</a>
+          </li>
+          <li>
+            <i id="icon-submissions" class="nav-icon"></i
+            ><a href="#">Submissions</a>
+          </li>
+          <li>
+            <i id="icon-settings" class="nav-icon"></i><a href="#">Settings</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <i id="icon-music_library" class="nav-icon"></i
+            ><a href="#">Music Library</a>
+          </li>
+          <li>
+            <i id="icon-artists" class="nav-icon"></i><a href="#">Artists</a>
+          </li>
+        </ul>
+        <ul>
+          <li><i id="icon-faq" class="nav-icon"></i><a href="#">FAQ</a></li>
+          <li>
+            <i id="icon-contact" class="nav-icon"></i><a href="#">Contact Us</a>
+          </li>
+          <li>
+            <i id="icon-about" class="nav-icon"></i><a href="#">About Us</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <i id="icon-logout" class="nav-icon"></i><a href="#">Log Out</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <main>
+      <section id="spex-dashboard">
+        <div id="dashboard-header-left">
+          <h1><span id="menu-icon">&#8592;</span></h1>
+        </div>
+        <div id="dashboard-header-right"></div>
+        <div id="dashboard-center-left"></div>
+        <div id="dashboard-center-right"></div>
+        <div id="dashboard-bottom-left"></div>
+        <div id="dashboard-bottom-right"></div>
+      </section>
+    </main>
+    <script>
+      /**
+       * Callback for click events on menu icon
+       *
+       * @param {Event} event
+       * @return {void}
+       */
+      function clickMenuIcon(event) {
+        console.log(event.type);
+        navOverlay.style.display = "flex";
+      }
+
+      /**
+       * Callback for click events on the nav overlay
+       *
+       * @param {Event} event - The event object.
+       * @return {void}
+       */
+      function clickNavOverlay(event) {
+        console.log(event.type);
+        navOverlay.style.display = "none";
+      }
+
+      const navOverlay = document.getElementById("nav-overlay");
+      navOverlay && navOverlay.addEventListener("click", clickNavOverlay);
+
+      const menuIcon = document.getElementById("menu-icon");
+      menuIcon && menuIcon.addEventListener("click", clickMenuIcon);
+    </script>
+  </body>
+</html>
