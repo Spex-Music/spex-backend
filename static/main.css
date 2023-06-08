@@ -42,21 +42,12 @@ a {
     text-decoration: none;
 }
 
-#nav-overlay {
-    display: none;
-    /*none*/
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.3);
-}
+
 
 /* */
 nav {
-    position: fixed;
-    overflow: auto;
-    height: 100%;
-    width: 24ch;
+    grid-area: dashboard-nav;
+   
     padding: 3vh 0;
     display: flex;
     flex-direction: column;
@@ -91,24 +82,14 @@ nav ul li:hover {
     cursor: pointer;
     background-color: var(--light-bg-color);
     color: var(--light-text-color);
-    padding: 8px;
+    padding: 12px;
     
-    width: 8ch;
-    max-width: 8ch;
+    width: 12ch;
+    max-width: 12ch;
     border-radius: 3px;
     border: 1px solid  var(--border-color);
     box-shadow: var(--soft-shadow);
     -webkit-box-shadow: var(--soft-shadow);
-
-}
-
-#menu-icon:hover {
- 
-
-}
-
-#menu-icon:active {
-
 
 }
 
@@ -163,13 +144,13 @@ nav ul li:hover {
     background-color: var(--light-bg-color);
 
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 2fr 3fr;
+    grid-template-columns: 1fr 4fr 2fr;
+    grid-template-rows: 1fr 6fr 9fr;
     grid-template-areas:
-        "dashboard-status-left dashboard-status-right"
-        "dashboard-header-left dashboard-header-right"
-        "dashboard-center-left dashboard-center-right"
-        "dashboard-bottom-left dashboard-bottom-right";
+        "dashboard-nav dashboard-status-left dashboard-status-right"
+        "dashboard-nav dashboard-header-left dashboard-header-right"
+        "dashboard-nav dashboard-center-left dashboard-center-right"
+        "dashboard-nav dashboard-bottom-left dashboard-bottom-right";
 
     gap: 16px;
 }
