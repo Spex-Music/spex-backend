@@ -19,8 +19,10 @@ function clickMenuIcon(event) {
  * @return {void}
  */
 function clickNavOverlay(event) {
-  console.log(event.type);
-  navOverlay.style.display = 'none';
+  if (!event.target.closest('#main-menu')) {
+    console.log(event.type);
+    navOverlay.style.display = 'none';
+  }
 }
 
 const navOverlay = document.getElementById('nav-overlay');
