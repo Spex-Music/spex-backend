@@ -67,11 +67,13 @@ nav ul {
     margin: 0 0 16px 0;
 }
 
-nav ul li {
+
+
+nav ul li a {
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 8px 8px;
+    padding: 8px 16px;
     transition: background 0.3s ease;
 }
 
@@ -80,17 +82,13 @@ nav ul li:hover {
     cursor: pointer;
 }
 
-.nav-icon {
-    height: 32px;
-    width: 32px;
-}
 
 #menu-icon {
     cursor: pointer;
     background-color: var(--background-color);
     color: white;
     padding: 8px;
-    margin: 8px;
+    
     width: 6ch;
     max-width: 6ch;
     border-radius: 3px;
@@ -99,52 +97,56 @@ nav ul li:hover {
 }
 
 #menu-icon:hover {
-    text-decoration: overline;
     box-shadow:5px 5px 0px rgba(0, 0, 0, 0.2);
-    margin: 7px 9px 9px 7px;
+
 }
 
 #menu-icon:active {
     text-decoration: none;
     box-shadow:none;
-    margin: 12px 4px 4px 12px;
+
+}
+
+.nav__icon {
+    height: 32px;
+    width: 32px;
 }
 
 
 #icon-dashboard {
-    background: url("icons/dashboard_icon.svg");
+    background: url("res/icons/dashboard/dashboard_icon.svg");
 }
 
 #icon-submissions {
-    background: url("icons/file_upload_icon.svg");
+    background: url("res/icons/dashboard/file_upload_icon.svg");
 }
 
 #icon-settings {
-    background: url("icons/settings_icon.svg");
+    background: url("res/icons/dashboard/settings_icon.svg");
 }
 
 #icon-music_library {
-    background: url("icons/music_playlist_icon.svg");
+    background: url("res/icons/dashboard/music_playlist_icon.svg");
 }
 
 #icon-artists {
-    background: url("icons/artist_icon.svg");
+    background: url("res/icons/dashboard/artist_icon.svg");
 }
 
 #icon-faq {
-    background: url("icons/q&a_icon.svg");
+    background: url("res/icons/dashboard/q&a_icon.svg");
 }
 
 #icon-contact {
-    background: url("icons/message_icon.svg");
+    background: url("res/icons/dashboard/message_icon.svg");
 }
 
 #icon-about {
-    background: url("icons/info_icon.svg");
+    background: url("res/icons/dashboard/info_icon.svg");
 }
 
 #icon-logout {
-    background: url("icons/logout_icon.svg");
+    background: url("res/icons/dashboard/logout_icon.svg");
 }
 
 
@@ -169,6 +171,7 @@ nav ul li:hover {
 
 #dashboard-status-left {
     grid-area: dashboard-status-left;
+    padding: 16px;
 }
 
 #dashboard-status-right {
