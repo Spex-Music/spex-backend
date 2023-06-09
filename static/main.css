@@ -48,7 +48,6 @@ a {
 nav {
     grid-area: dashboard-nav;
    
-    padding: 3vh 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -145,7 +144,7 @@ nav ul li:hover {
 
     display: grid;
     grid-template-columns: 1fr 4fr 2fr;
-    grid-template-rows: 1fr 6fr 9fr;
+    grid-template-rows: 1fr 2fr 3fr;
     grid-template-areas:
         "dashboard-nav dashboard-status-left dashboard-status-right"
         "dashboard-nav dashboard-header-left dashboard-header-right"
