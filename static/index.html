@@ -74,26 +74,43 @@
           </ul>
         </nav>
 
-        <div id="dashboard-header-left">
-          <button id="menu-icon" type="button">Button</button>
-          <h1>Dashboard</h1> 
-         
+        <div id="dashboard-header-left" class="flex-row align-end">
+          <div class="flex-row">
+            <button id="menu-icon" class="soft-shadow primary-button" type="button">Button</button>
+            <h2>Dashboard</h2> 
+          </div>
+          
         </div>
-        <div id="dashboard-header-right">
-          <div>
+        <div id="dashboard-header-right" class="flex-column justify-end">
+          <div class="flex-row justify-between">
             <div>
               <h2>Hey, Name</h2>
               <h3>Role</h3>
             </div>
 
-            <img />
+            <img style="background-color: aquamarine; min-width: 33%; max-width:33%; border-radius: 50%;"/>
             
           </div>
         </div>
-        <div id="dashboard-center-left"></div>
-        <div id="dashboard-center-right"></div>
-        <div id="dashboard-bottom-left"></div>
-        <div id="dashboard-bottom-right"></div>
+        <div id="dashboard-center-left" class="flex-row grow-evenly">
+          <div class="soft-shadow"></div>
+          <div class="soft-shadow"></div>
+          <div class="soft-shadow"></div>
+        </div>
+        
+        <div id="dashboard-center-right" class="flex-column  grow-evenly">
+          <div class="soft-shadow"></div>
+          <div class="soft-shadow"></div>
+          <div class="soft-shadow"></div>
+        </div>
+        <div id="dashboard-bottom-left" class="flex-column">
+          <h2>Tracks</h2>
+          <div class="soft-shadow stretch-down"></div>
+        </div>
+        <div id="dashboard-bottom-right" class="flex-column">
+          <h2>Calendar</h2>
+          <div class="soft-shadow stretch-down"></div>          
+        </div>
       </section>
     </main>
     <script src="main.js"></script>
