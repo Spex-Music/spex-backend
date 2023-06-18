@@ -155,7 +155,7 @@ nav ul li:hover {
 }
 
 /* For screens larger than 900px */
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1200px) {
     #spex-dashboard {
         grid-template-columns: 1fr 4fr 2fr;
         grid-template-rows: 1fr 2fr 3fr;
