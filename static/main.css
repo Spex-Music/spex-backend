@@ -82,6 +82,7 @@ a {
 
 .justify-between {
     justify-content: space-between;
+    font-size: larger;
 }
 
 .justify-end {
